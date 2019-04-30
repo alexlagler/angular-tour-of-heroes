@@ -6,10 +6,10 @@
   </div>
   <div class="login-form">
     <h3>Username:</h3>
-    <input type="text" placeholder="Username" [(ngModel)]="username"/><br>
+    <input type="text" placeholder="Username" [(ngModel)]="username" id="username"/><br>
     <h3>Password:</h3>
-    <input type="password" placeholder="Password" [(ngModel)]="password"/>
+    <input type="password" placeholder="Password" [(ngModel)]="password" id="password"/>
     <br>
-    <input type="button" value="Login" class="login-button" (click)="login()"/>
+    <input type="button" value="Login" class="login-button" (click)="login()" id="submit"/>
   </div>
 </div>
