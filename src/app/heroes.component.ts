@@ -41,6 +41,10 @@ export class HeroesComponent implements OnInit {
   deleteHero(hero: Hero, event: any): void {
     event.stopPropagation();
     this.heroService.delete(hero).subscribe(res => {
+      if  (hero.name == 'Magneta') {
+        this.router.navigate(['/bad-request']);
+        return;
+      }
       this.heroes = this.heroes.filter(h => h !== hero);
       if (this.selectedHero === hero) {
         this.selectedHero = null;
